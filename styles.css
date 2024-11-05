@@ -1,0 +1,381 @@
+
+
+/* Reset and General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #0a0a0a;
+}
+
+.header {
+    background-image: url('header-7.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.header-content {
+    position: relative;
+    text-align: center;
+}
+
+.title {
+    font-size: 3rem;
+    color: goldenrod;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px 0;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: goldenrod;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color:#fff;
+}
+/* Estilo básico para a seção de serviços */
+.services-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.service-card h3 {
+    font-size: 1.2em;
+    color: goldenrod; /* Cor do título */
+    margin: 10px 0; /* Espaço entre o título e o ícone e o parágrafo */
+    text-align: center; /* Centraliza o título no cartão */
+    font-family: "Times New Roman", Times, serif; /* Fonte Times New Roman */
+}
+
+.service-card p {
+    color: #333; /* Cor para o texto do serviço */
+    text-align: center; /* Centraliza o texto */
+    font-family: "Times New Roman", Times, serif; /* Fonte Times New Roman */
+    font-size: 16px; /* Tamanho do texto */
+}
+
+.service-card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.service-card {
+    position: relative;
+    width: 200px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card i {
+    font-size: 2em;
+    color: goldenrod;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.services-section h2 {
+    font-family: "Times New Roman", Times, serif; /* Define a fonte desejada */
+    font-size: 2em; /* Ajusta o tamanho da fonte */
+    color: goldenrod; /* Define a cor do texto */
+    text-align: center
+}
+
+/* Reflexo espelhado dourado ajustado */
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%; /* Posicione o reflexo fora da área inicial */
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 215, 0, 0.3), transparent);
+    transform: skewX(-25deg);
+    transition: left 0.4s ease; /* Transição mais curta e controlada */
+    pointer-events: none; /* Evita que o reflexo cause qualquer evento de clique */
+}
+
+.service-card:hover::before {
+    left: 100%; /* Mova o reflexo suavemente para a direita */
+}
+/* Estilo para o texto dos serviços */
+.services-section h2 {
+    color: goldenrod; /* Cor para o título da seção */
+}
+
+.service-card p {
+    color: #333; /* Cor para o texto dos serviços */
+}
+
+.service-card i {
+    color: goldenrod; /* Cor para o ícone */
+}
+
+
+
+/* Efeito de zoom e sombra */
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 215, 0, 0.3); /* Sombra dourada */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .about-section {
+        text-align: center;
+        padding: 50px 20px;
+    }
+    
+    .about-images {
+        display: flex;
+        flex-wrap: wrap; /* Permite que as imagens ocupem várias linhas, se necessário */
+        gap: 25px; /* Espaçamento entre as imagens */
+        justify-content: center;
+    }
+    
+    .about-images img {
+        width: 100%;
+        max-width: 250px; /* Limita a largura máxima das imagens */
+        height: auto; /* Mantém a proporção das imagens */
+        border-radius: 8px; /* Bordas arredondadas para um visual mais suave */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombras para destaque */
+        object-fit: cover; /* Ajusta a imagem para cobrir o espaço sem deformação */
+        transition: transform 0.3s ease; /* Animação de hover */
+        position: relative; /* Necessário para posicionar o pseudo-elemento */
+        border: 1px solid goldenrod; /* Espessura e cor da borda */
+    }
+    
+   
+    .about-images img:hover {
+        transform: scale(1.05); /* Efeito de zoom ao passar o cursor */
+    }
+
+    .about-section h2 {
+        font-size: 2.5em; /* Aumenta o tamanho do texto */
+        color: goldenrod; /* Altere para a cor desejada (exemplo: #123456) */
+        font-weight: bold; /* Opcional: deixa o texto mais destacado */
+        margin-bottom: 20px; /* Espaçamento inferior */
+        text-align: center; /* Centraliza o texto */
+    }
+    
+    
+
+
+/* Rodapé com gradiente */
+.footer-section {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.98), rgba(184, 134, 11, 0.5));
+    color: #f1c232; /* Cor dourada para texto */
+    padding: 40px 0;
+    text-align: left;
+}
+
+
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+}
+
+.footer-logo-image {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.footer-menu, .footer-contacts, .footer-social {
+    flex: 1;
+    min-width: 150px;
+    text-align: left;
+}
+
+.footer-menu h4, .footer-contacts h4, .footer-social h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #f1c232; /* Cor dourada para títulos */
+}
+
+.footer-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-menu li {
+    margin-bottom: 8px;
+}
+
+.footer-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-menu a:hover {
+    color: #f1c232; /* Dourado ao passar o mouse */
+}
+
+.footer-contacts p {
+    margin: 5px 0;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.footer-social a {
+    color: #ffffff;
+    margin-right: 10px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #f1c232; /* Dourado ao passar o mouse */
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+.reserve-button {
+    background: gold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: #000;
+    font-weight: bold;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Estilização da seção do formulário de reserva */
+.form-section {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(184, 134, 11, 0.7)); /* Gradiente para o fundo */
+    color: #f1c232; /* Cor do texto */
+    padding: 50px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5); /* Sombra para destaque */
+}
+
+/* Título do formulário */
+.form-section h2 {
+    color: #f1c232; /* Cor dourada para o título */
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilo dos campos do formulário */
+.form-section form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #f1c232;
+}
+
+.form-section form input,
+.form-section form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #f1c232; /* Borda dourada */
+    border-radius: 8px;
+    background-color: #333; /* Fundo escuro */
+    color: #f1c232; /* Texto dourado */
+    font-size: 16px;
+}
+
+.form-section form input::placeholder,
+.form-section form textarea::placeholder {
+    color: #c0b283; /* Cor dos placeholders */
+}
+
+.form-section form input:focus,
+.form-section form textarea:focus {
+    outline: none;
+    border-color: #ffbf00; /* Borda de destaque ao focar */
+}
+
+/* Estilo do botão de envio */
+.form-section form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    color: #333; /* Cor do texto */
+    background-color: #f1c232; /* Cor do fundo dourado */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-section form button:hover {
+    background-color: #ffbf00; /* Alteração de cor ao passar o mouse */
+}

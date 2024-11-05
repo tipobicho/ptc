@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocolo de Sonhos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="overlay">
+            <div class="header-content">
+                <h1 class="title">Protocolo de Sonhos</h1>
+                <p class="subtitle">A melhor solução para gestão do seu evento</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <!-- Botão Reserva no menu de navegação -->
+<nav class="navbar">
+    <ul>
+        <li><a href="#home">Página Inicial</a></li>
+        <li><a href="#services">Serviços</a></li>
+        <li><a href="#about">Sobre Nós</a></li>
+        <li><a href="#contact">Contactos</a></li>
+        <li><a href="#reserve-form" class="reserve-button">Reserva</a></li> <!-- Certifique-se que o href está correto -->
+    </ul>
+</nav>
+
+
+    <!-- Services Section -->
+   <!-- Services Section -->
+   <section id="services" class="services-section">
+    <h2>Nossos Serviços</h2>
+    <div class="service-card-container">
+        <div class="service-card">
+            <i class="fas fa-user-friends"></i> <!-- Ícone para Gestão de convidados -->
+            <h3>Gestão de convidados</h3>
+            <p>Garantimos uma gestão eficaz e personalizada dos convidados, desde o convite inicial até à confirmação de presença e acompanhamento durante o evento.</p>
+        </div>
+        
+        <div class="service-card">
+            <i class="fas fa-globe"></i> <!-- Ícone para Protocolo Diplomático -->
+            <h3>Protocolo Diplomático</h3>
+            <p>Possuímos experiência e conhecimento especializado em protocolo diplomático, assegurando o cumprimento de todas as formalidades e
+                procedimentos adequados a eventos de natureza diplomática.</p>
+        </div>
+        
+        <div class="service-card">
+            <i class="fas fa-building"></i> <!-- Ícone para Gestão de Protocolos Corporativos -->
+            <h3>Gestão de Protocolos Corporativos</h3>
+            <p>Oferecemos serviços de gestão de protocolos de negócios, incluindo a organização de eventos corporativos, receções e cerimônias corporativas.</p>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <h2>Do Planejamento à Execução</h2>
+        <p>Na Dream Protocol, orgulhamo-nos de oferecer uma vasta gama de serviços de protocolo, concebidos para satisfazer as necessidades específicas de cada cliente e garantir o sucesso de cada evento. Da gestão de hóspedes ao protocolo diplomático, nosso objetivo é fornecer uma experiência excecional e sem preocupações para nossos clientes.</p>
+        <div class="about-images">
+            <img src="4.jpeg" alt="Equipe Protocolo">
+            <img src="3.jpeg" alt="Equipe Protocolo">
+            <img src="1.jpeg" alt="Equipe Protocolo">
+            <img src="5.jpeg" alt="Equipe Protocolo">
+        </div>
+    </section>
+
+
+<!-- Services Section 2 -->
+<section id="services" class="services-section">
+    <h2>O que nos diferencia do mercado?</h2>
+    <div class="service-card-container">
+        <div class="service-card">
+            <i class="fas fa-award"></i> <!-- Ícone para Gestão de convidados -->
+            <h3>Excelência e Proficionalismo</h3>
+            <p>A nossa dedicação à excelência e profissionalismo é evidente em todos os eventos que organizamos.</p>
+        </div>
+        
+        <div class="service-card">
+            <i class="fas fa-lightbulb"></i> <!-- Ícone para Protocolo Diplomático -->
+            <h3>Criativiade e Inovação</h3>
+            <p>Orgulhamo-nos da nossa capacidade de pensar fora da caixa e criar eventos únicos e memoráveis.
+                </p>
+        </div>
+        
+        <div class="service-card">
+            <i class="fas fa-search"></i> <!-- Ícone para Gestão de Protocolos Corporativos -->
+            <h3>Atenção aos detalhes</h3>
+            <p>Nós cuidamos de cada detalhe, não importa quão pequeno, para garantir que cada evento seja impecável e impecável.</p>
+        </div>
+    </div>
+</section>
+
+
+<section id="reserve-form" class="form-section">
+    <h2>Preencha o Formulário</h2>
+    <form action="enviar_formulario.php" method="POST" target="hidden_iframe" onsubmit="return enviarFormulario()">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="empresa">Empresa / Evento</label>
+        <input type="text" id="empresa" name="empresa" required>
+
+        <label for="telefone">Telefone</label>
+        <input type="tel" id="telefone" name="telefone">
+
+        <label for="descricao">Descrição do Evento</label>
+        <textarea id="descricao" name="descricao" required></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+    <!-- Iframe oculto para evitar nova aba -->
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+</section>
+
+<script>
+    function enviarFormulario() {
+        alert("Formulário enviado com sucesso!");
+        return true; // Retorna true para submeter o formulário
+    }
+</script>
+
+
+
+
+
+<footer class="footer-section">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="logo.png" alt="Protocolo de Sonhos" class="footer-logo-image">
+            <p>Proporcionar experiências inesquecíveis através de um serviço personalizado e de elevada qualidade.</p>
+        </div>
+        
+        <div class="footer-menu">
+            <h4>Menu</h4>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#about">Sobre nós</a></li>
+                <li><a href="#contact">Contactos</a></li>
+                <li><a href="#newsletter">Newsletters</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contacts">
+            <h4>Contactos</h4>
+            <p>Benfica, Centro Comercial Clemência, loja N. 7</p>
+            <p>+244 929 606 240</p>
+            <p>comercial@protocolodesonhos.ao</p>
+        </div>
+
+        <div class="footer-social">
+            <h4>Redes Sociais</h4>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
